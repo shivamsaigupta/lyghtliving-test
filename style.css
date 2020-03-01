@@ -24,8 +24,7 @@
   font-weight: bold;
 }
 #firstblockb p {
-  opacity: 0.8;
-  color: black;
+  color: #818181;
 }
 
 #image {
@@ -53,6 +52,28 @@
   width: 190px;
   height: 60px;
   display: flex;
+}
+
+#secondblock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: 10px 12px 10px 12px;
+}
+#secondblock h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+#secondblock p {
+  color: #818181;
+}
+
+@media only screen and (max-width: 960px) {
+  body {
+    background-color: lightblue;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
