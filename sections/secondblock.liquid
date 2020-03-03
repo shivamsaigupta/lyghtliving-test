@@ -1,0 +1,80 @@
+<div id="secondblock">
+      <h1>Lyght Vorteile</h1>
+      <p>Wir sind anders als die anderen.</p>
+    </div>
+
+<style>
+
+#secondblock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 450px;
+  margin-top: 350px;
+  text-align: center;
+  padding: 10px 12px 10px 12px;
+}
+#secondblock h1 {
+  font-size: {{section.settings.headingSize}}px;
+  color: {{section.settings.headingColor}};
+  font-weight: bold;
+  font-family: "Circular Std Bold" !important;
+}
+#secondblock p {
+  font-size: {{section.settings.textSize}}px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  line-height: 1.8rem;
+  color: {{section.settings.textColor}};
+  opacity: 0.85;
+}
+</style>
+
+{% schema %}
+  {
+    "name": "Second block",
+    "settings": [{
+		"type": "color",
+		"id": "headingColor",
+		"label": "Heading Color",
+		"default": "#000000"
+	
+	},{
+		"type": "range",
+		"id": "headingSize",
+		"min": 12,
+		"max": 52,
+		"unit": "px",
+		"label": "Heading Font Size",
+		"default": 32
+	
+	},
+{
+		"type": "color",
+		"id": "textColor",
+		"label": "Paragraph Color",
+		"default": "#818181"
+	
+	}, {
+		"type": "range",
+		"id": "textSize",
+		"min": 4,
+		"max": 32,
+		"unit": "px",
+		"label": "Paragraph Font Size",
+		"default": 16
+	
+	}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

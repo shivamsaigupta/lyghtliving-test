@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!doctype html>
+<head>
+  <title>{{ page_title }}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="{{ page_description | escape }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
       $(document).ready(function() {
         // Add smooth scrolling to all links
@@ -34,27 +35,14 @@
         });
       });
     </script>
-  </head>
-  <body>
-    <div id="firstblock">
-      <div id="firstblocka"></div>
-      <div id="image"><img src="living-room.jpg" width="250px" /></div>
-      <div id="firstblockb">
-        <h1>Smoothes Einrichten</h1>
-        <p>
-          In unseren kurierten Sets stellen wir passende Mobel zusammen, damit
-          du es nicht mehr tun musst.
-        </p>
-        <a class="cta-btn-outer" href="#secondblock">
-          <div class="cta-btn-inner">
-            Zu den Sets
-          </div>
-        </a>
-      </div>
-    </div>
-    <div id="secondblock">
-      <h1>Lyght Vorteile</h1>
-      <p>Wir sind anders als die anderen.</p>
-    </div>
-  </body>
+  {{ content_for_header }} <!-- Header hook for plugins -->
+  {{ 'application.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'application.js' | asset_url | script_tag }}
+</head>
+<body>
+
+  <main role="main">
+    {{ content_for_layout }}
+  </main>
+</body>
 </html>

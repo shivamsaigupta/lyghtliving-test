@@ -1,0 +1,203 @@
+
+<div id="firstblock">
+      <div id="firstblocka"></div>
+      <div id="image"><img src={{section.settings.imgUrl}} width="250px" /></div>
+      <div id="firstblockb">
+        <h1>Smoothes Einrichten</h1>
+        <p>
+          In unseren kurierten Sets stellen wir passende Möbel zusammen, damit
+          du es nicht mehr tun musst.
+        </p>
+        <a class="cta-btn-outer" href="#secondblock">
+          <div class="cta-btn-inner">
+            Zu den Sets
+          </div>
+        </a>
+      </div>
+</div>
+
+<style>
+  
+#firstblock {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+#firstblocka {
+  width: 100%;
+  height: 100px;
+  background: white;
+}
+
+#firstblockb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  min-height: 600px;
+  padding: 70px 45px 35px 45px;
+  width: 100%;
+  background: {{section.settings.bgColor}};
+  z-index: 1;
+}
+#firstblockb h1 {
+  font-size: {{section.settings.headingSize}}px;
+  font-weight: bold;
+  margin-top: 4rem;
+  font-family: "Circular Std Bold" !important;
+  color: {{section.settings.headingColor}};
+}
+#firstblockb p {
+  font-family: futura-pt, sans-serif;
+  font-size: {{section.settings.textSize}}px;
+  font-weight: 600;
+  line-height: 1.8rem;
+  opacity: 0.85;
+  color: {{section.settings.textColor}};
+}
+
+#image {
+  flex: 1;
+  width: 250px;
+  position: relative;
+  align-self: center;
+  margin-top: -20px;
+  margin-bottom: -90px;
+  z-index: 2;
+}
+#image img {
+  border: solid 2px black;
+}
+
+.cta-btn-inner {
+  flex: 1;
+  padding: 10px;
+  background-color: black;
+  margin: 10px;
+  text-align: center;
+  border: solid 1px white;
+  text-decoration: none;
+  color: white;
+  font-family: futura-pt, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cta-btn-outer {
+  background-color: black;
+  margin-top: 2rem;
+  width: 190px;
+  height: 60px;
+  display: flex;
+}
+
+
+@media only screen and (min-width: 960px) {
+  #firstblock {
+    display: grid;
+    grid-template-columns: 0 300px 300px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    min-width: 600px;
+    grid-gap: 10px;
+    column-gap: 4%;
+  }
+
+  #image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+    padding: 10px;
+    min-width: 300px;
+    margin: 0 !important;
+    position: static;
+  }
+  #image img {
+    width: 300px;
+    margin: 20px;
+  }
+
+  #firstblockb {
+    position: static;
+    text-align: start;
+    padding: 70px 25px 50px 25px;
+  }
+  #firstblockb h1 {
+    margin-left: 0.5rem;
+  }
+  #firstblockb p {
+    margin-left: 4rem;
+    margin-bottom: 3rem;
+  }
+}
+</style>
+
+
+{% schema %}
+  {
+    "name": "First Block",
+    "settings": [{
+		"type": "color",
+		"id": "bgColor",
+		"label": "Background Color",
+		"default": "#f9f6f2"
+	
+	},
+{
+		"type": "color",
+		"id": "headingColor",
+		"label": "Heading Color",
+		"default": "#000000"
+	
+	},
+{
+		"type": "range",
+		"id": "headingSize",
+		"min": 8,
+		"max": 52,
+		"step": 1,
+		"unit": "px",
+		"label": "Heading Font Size",
+		"default": 32
+	
+	},
+{
+		"type": "color",
+		"id": "textColor",
+		"label": "Paragraph Color",
+		"default": "#818181"
+	
+	},
+{
+		"type": "range",
+		"id": "textSize",
+		"min": 4,
+		"max": 32,
+		"step": 1,
+		"unit": "px",
+		"label": "Paragraph Font Size",
+		"default": 16
+	
+	},
+{
+		"type": "text",
+		"id": "imgUrl",
+		"label": "Image URL",
+		"default": "https://imgix.bustle.com/uploads/image/2019/3/21/ee5a0c79-3981-498f-9ca0-c1f0217fc5f3-shutterstock_1118035247.jpg?w=500&h=380&fit=crop&crop=faces&auto=format&q=70"
+	
+	}]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

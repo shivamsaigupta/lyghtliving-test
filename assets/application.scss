@@ -1,0 +1,13 @@
+// put your styles here
+
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Circular Std Bold";
+  src: url("circular-std-bold.woff2") format("woff2"),
+       url("circular-std-bold.woff") format("woff");
+}
+
